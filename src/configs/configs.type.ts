@@ -1,6 +1,11 @@
 export type Config = {
   app: AppConfig;
   database: DatabaseConfig;
+  redis: RedisConfig;
+  sentry: SentryConfig;
+  jwt: JWTConfig;
+  aws: AWSConfig;
+  mailer: NodemailerConfig;
 };
 
 export type AppConfig = {
@@ -14,4 +19,37 @@ export type DatabaseConfig = {
   user: string;
   password: string;
   dbName: string;
+};
+
+export type RedisConfig = {
+  port: number;
+  host: string;
+  password: string;
+};
+
+export type SentryConfig = {
+  dbs: string;
+  debug: boolean;
+  env: string;
+};
+
+export type JWTConfig = {
+  accessSecret: string;
+  accessExpiresIn: number;
+  refreshSecret: string;
+  refreshExpiresIn: number;
+};
+
+export type AWSConfig = {
+  accessKeyId: string;
+  secretAccessKey: string;
+  region: string;
+  bucketName: string;
+  bucketUrl: string;
+  endpoint: string;
+};
+
+export type NodemailerConfig = {
+  name: string;
+  password: string;
 };

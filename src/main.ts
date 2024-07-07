@@ -4,17 +4,17 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { AppModule } from './app.module';
-import { AppConfig, Config } from './configs/configs.type';
+import { AppConfig } from './configs/configs.type';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const configService = app.get(ConfigService<Config>);
+  const configService = app.get(ConfigService);
   const appConfig = configService.get<AppConfig>('app');
 
   const config = new DocumentBuilder()
-    .setTitle('AutoRiaClone')
-    .setDescription('The AutoRia API description')
+    .setTitle('AutoRio example')
+    .setDescription('The AutoRio API description')
     .setVersion('1.0.0')
     .addBearerAuth({
       type: 'http',
@@ -46,4 +46,5 @@ async function bootstrap() {
     );
   });
 }
+
 void bootstrap();

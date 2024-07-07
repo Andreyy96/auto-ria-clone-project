@@ -1,0 +1,16 @@
+export enum TableNameEnum {
+  USERS = 'users',
+  REFRESH_TOKENS = 'refresh_tokens',
+  ACCESS_TOKENS = 'access_tokens',
+  CARS = 'cars',
+  BRANDS = 'brands',
+  ADMINS = 'admins',
+  MANAGERS = 'managers',
+  SOLD_CARS = 'sold_cars',
+  CAR_SHOWROOMS = 'car_showrooms',
+  ADMIN_CAR_SHOWROOM = 'admins_car_showroom',
+  USERS_CAR_SHOWROOM = 'users_car_showroom',
+  MANAGERS_CAR_SHOWROOM = 'managers_car_showroom',
+  MECHANIC_CAR_SHOWROOM = 'mechanic_car_showroom',
+  VIEWS = 'views',
+}

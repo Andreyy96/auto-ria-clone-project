@@ -3,7 +3,10 @@
 /node_modules
 /build
 
-/environments/local.env
+auto-ria-clone-project-api-s3-data
+auto-ria-clone-project-api-db
+environments/local.env
+environments/dev.env
 
 # Logs
 logs
